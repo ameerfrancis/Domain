@@ -12,3 +12,4 @@ This system will make the jobs of librarians much simpler as they would easily b
 A supplier (company or library member) supplies the library with a new book. The librarian opens the application to add the book to the system by inserting all of the book's details. Once all details have been added, the system generates a unique code for that book. The code is printed onto a sticker. The sticker is stuck onto the book. The book gets added onto the shelves. 
 
 
+![Class Diagram with UML Notation (3)](https://user-images.githubusercontent.com/47172044/56232966-4ae44680-6082-11e9-97a0-df4ac366ae9f.jpeg)
