@@ -3,10 +3,17 @@ package com.library.service.impl.people;
 import com.library.domain.people.Author;
 import com.library.repository.AuthorRepository;
 import com.library.service.AuthorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service("AuthorServiceImpl")
+
 public class AuthorServiceImpl implements AuthorService {
+
+    @Qualifier("AuthorRepositoryImpl")
 
     private AuthorServiceImpl service = null;
     private AuthorRepository repository;

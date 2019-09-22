@@ -3,7 +3,9 @@ package com.library.repository.impl.Book;
 import java.util.ArrayList;
 
 import com.library.domain.book.Book;
+import org.springframework.stereotype.Repository;
 
+@Repository("BookRepo")
 public class BookRepositoryImpl {
 
     private static BookRepositoryImpl repository = null;

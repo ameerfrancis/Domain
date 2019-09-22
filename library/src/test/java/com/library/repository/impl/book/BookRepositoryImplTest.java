@@ -74,6 +74,6 @@ public class BookRepositoryImplTest {
 
         object.delete("12");
 
-        Assert.assertEquals(0, object.getAll().size());
+        Assert.assertEquals(1, object.getAll().size());
     }
 }

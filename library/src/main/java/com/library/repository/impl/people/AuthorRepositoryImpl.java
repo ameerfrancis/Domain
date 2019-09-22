@@ -12,6 +12,7 @@ public class AuthorRepositoryImpl {
         private ArrayList<Author> authors;
 
         private AuthorRepositoryImpl(){
+
             this.authors = new ArrayList<Author>();
         }
 

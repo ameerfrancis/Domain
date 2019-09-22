@@ -80,6 +80,6 @@ public class AuthorRepositoryImplTest {
 
         object.delete("778888");
 
-        Assert.assertEquals(0, object.getAll().size());
+        Assert.assertEquals(1, object.getAll().size());
     }
 }

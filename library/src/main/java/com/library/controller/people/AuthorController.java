@@ -3,6 +3,7 @@ import com.library.domain.people.Author;
 import com.library.factory.people.AuthorFactory;
 import com.library.service.impl.people.AuthorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class AuthorController {
 
     @Autowired
+    @Qualifier("AuthorServiceImpl")
     private AuthorServiceImpl service;
 
     @GetMapping("/create/{authorName, authorID}")

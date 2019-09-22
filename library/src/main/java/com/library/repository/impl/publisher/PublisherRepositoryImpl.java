@@ -3,6 +3,9 @@ package com.library.repository.impl.publisher;
 import java.util.ArrayList;
 
 import com.library.domain.publisher.Publisher;
+import org.springframework.stereotype.Repository;
+
+@Repository("PublisherRepositoryImpl")
 
 public class PublisherRepositoryImpl {
 

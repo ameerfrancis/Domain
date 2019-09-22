@@ -3,10 +3,15 @@ package com.library.service.impl.publisher;
 import com.library.domain.publisher.Publisher;
 import com.library.repository.PublisherRepository;
 import com.library.service.PublisherService;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service("PublisherServiceImpl")
 public class PublisherServiceImpl implements PublisherService {
+
+    @Qualifier("PublisherRepositoryImpl")
 
     private PublisherServiceImpl service = null;
     private PublisherRepository repository;

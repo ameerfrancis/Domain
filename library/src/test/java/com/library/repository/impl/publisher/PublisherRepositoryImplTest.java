@@ -72,6 +72,6 @@ public class PublisherRepositoryImplTest {
 
         object.delete("01");
 
-        Assert.assertEquals(0, object.getAll().size());
+        Assert.assertEquals(1, object.getAll().size());
     }
 }

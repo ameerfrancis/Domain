@@ -1,10 +1,15 @@
 package com.library.repository.impl;
 
 import com.library.domain.people.Author;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("AuthorRepositoryImpl")
+
 public class AuthorRepositoryImpl {
+
+
     private static AuthorRepositoryImpl repository = null;
     private ArrayList<Author> authors;
 

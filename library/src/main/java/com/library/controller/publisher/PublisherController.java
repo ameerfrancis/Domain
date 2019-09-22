@@ -8,6 +8,7 @@ import com.library.factory.publisher.PublisherFactory;
 import com.library.service.impl.people.AuthorServiceImpl;
 import com.library.service.impl.publisher.PublisherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class PublisherController {
 
     @Autowired
+    @Qualifier("PublisherServiceImpl")
     private PublisherServiceImpl service;
 
     @GetMapping("/create/{publisherName, publisherID}")

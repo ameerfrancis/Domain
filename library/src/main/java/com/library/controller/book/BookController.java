@@ -7,15 +7,17 @@ import com.library.factory.people.AuthorFactory;
 import com.library.service.impl.book.BookServiceImpl;
 import com.library.service.impl.people.AuthorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/library/book ")
+@RequestMapping("/library/book")
 public class BookController {
 
     @Autowired
+    @Qualifier("BookServiceImpl")
     private BookServiceImpl service;
 
     @GetMapping("/create/{bookID, title, author, genre, publisher, supplier}")
@@ -26,7 +28,7 @@ public class BookController {
 
     }
 
-    @GetMapping("/getall")
+    @GetMapping("/getAll")
     @ResponseBody
     public ArrayList<Book> getAll(){
         return service.getAll();
