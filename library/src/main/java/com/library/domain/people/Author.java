@@ -1,8 +1,15 @@
 package com.library.domain.people;
 
+//import javax.persistence.*;
+
+//@Entity
 public class Author {
     
+    //@Id
+    //@GeneratedValue
+    //@Column(name = "id")
     private String authID;
+    //@Column(name = "name")
     private String name;
 
 
@@ -29,12 +36,12 @@ public class Author {
         private String authID;
 
 
-        public Author.Builder name(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
         
-        public Author.Builder authID(String authID)
+        public Builder authID(String authID)
         {
             this.authID = authID;
             return this;

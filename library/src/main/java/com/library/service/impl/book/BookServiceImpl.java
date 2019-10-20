@@ -4,25 +4,22 @@ import com.library.domain.book.Book;
 import com.library.repository.BookRepository;
 import com.library.repository.impl.Book.BookRepositoryImpl;
 import com.library.service.BookService;
-import com.library.service.impl.people.AuthorServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-
-@Service("BookServiceImpl")
-
+@Repository("BookServiceImpl")
 public class BookServiceImpl implements BookService {
 
-
-@Qualifier("BookRepo")
     private BookServiceImpl service = null;
     private BookRepository repository;
 
-//    private BookServiceImpl(){
-//        this.repository = BookRepositoryImpl.getRepository();
+//    public BookServiceImpl(){
+//        repository = BookRepository.getRepository();
 //    }
+
+    /*private AuthorServiceImpl(){
+        this.repository = AuthorServiceImpl.getRepository();
+    }*/
 
     public BookService getService(){
         if (service == null) service = new BookServiceImpl();

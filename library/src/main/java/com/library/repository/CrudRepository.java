@@ -5,5 +5,4 @@ public interface CrudRepository<A, ID> {
     A update(A a);
     void delete(ID id);
     A read(ID id);
-
 }
